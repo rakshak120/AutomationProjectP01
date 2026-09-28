@@ -36,9 +36,11 @@ GitHub → Jenkins → Maven → TestNG → Selenium WebDriver → Test Results
 Code changes are pushed to GitHub and the Jenkins job checks out the
 repository and executes the automated TestNG suite using Maven.
 
+
+
 ## Project Structure
 
-
+```text
 AutomationProjectP01
 │
 ├── src
@@ -53,8 +55,7 @@ AutomationProjectP01
 ├── pom.xml
 ├── testng.xml
 └── README.md
-
-
+```
 
 ## Key Features
 
@@ -188,21 +189,26 @@ Jenkins checks out the project from GitHub and executes:
 
 ```bash
 mvn clean test
+```
 
+The Maven build runs the TestNG automation suite and generates
+Maven/Surefire test results that can be reviewed through Jenkins.
+
+---
 
 ## Test Execution Stability
 
 Test execution can occasionally be affected by external factors such as:
 
-* Network connectivity
-* Website response time
-* Browser/page loading time
-* Temporary application delays
-* Test environment conditions
+- Network connectivity
+- Website response time
+- Browser/page loading time
+- Temporary application delays
+- Test environment conditions
 
 Because the automation interacts with a live web application, an isolated test failure should be investigated by checking the failure reason and rerunning the suite before treating it as an application defect.
 
-The project uses explicit waits to reduce synchronization-related failures.
+The framework uses explicit waits and reusable Selenium utilities to improve synchronization and reduce timing-related failures.
 
 ---
 
@@ -212,8 +218,9 @@ Maven Surefire generates test execution reports after the test run.
 
 Reports can be found under:
 
-
+```text
 target/surefire-reports
+```
 
 These reports provide information about:
 
@@ -252,7 +259,6 @@ This project is intended to demonstrate practical knowledge of:
 * Jenkins CI execution
 * Debugging and analyzing automation failures
 
----
 
 
 ```

@@ -6,6 +6,16 @@ The project demonstrates UI automation using the **Page Object Model (POM)**, re
 
 ---
 
+## Project Status
+
+The automation suite currently contains **7 UI test cases**.
+
+- Local execution: **7/7 tests passed**
+- Jenkins CI execution: **7/7 tests passed**
+- Build tool: Maven
+- Test framework: TestNG
+- CI tool: Jenkins
+
 ## Tech Stack
 
 * **Java 21**
@@ -18,6 +28,13 @@ The project demonstrates UI automation using the **Page Object Model (POM)**, re
 * **Git / GitHub**
 
 ---
+
+## CI/CD Flow
+
+GitHub → Jenkins → Maven → TestNG → Selenium WebDriver → Test Results
+
+Code changes are pushed to GitHub and the Jenkins job checks out the
+repository and executes the automated TestNG suite using Maven.
 
 ## Project Structure
 
@@ -98,13 +115,17 @@ This allows the automation suite to be executed outside the local Eclipse enviro
 
 ## Test Scenarios
 
-The automation project contains UI test scenarios covering key booking/search workflows, including:
+The automation project contains UI test scenarios covering booking and
+search workflows, including:
 
 * Destination/search validation
 * Date selection
 * Guest and room selection
 * Search execution
-* Result validation
+* Search result validation
+* Hotel selection and reservation flow
+* Booking details and guest field validation
+* Negative/error validation scenarios
 * Different currency/language combinations
 
 Example test data includes:
@@ -157,21 +178,17 @@ mvn clean test
 
 ---
 
+
+
 ## Jenkins Execution
 
-The project is configured to run through Jenkins using Maven.
+The project is integrated with Jenkins for CI execution.
 
-### Jenkins Build Command
+Jenkins checks out the project from GitHub and executes:
 
 ```bash
 mvn clean test
-```
 
-Jenkins executes the TestNG suite and generates the Maven/Surefire test results.
-
-The Jenkins workspace is used to maintain the project and build artifacts.
-
----
 
 ## Test Execution Stability
 
@@ -207,6 +224,17 @@ These reports provide information about:
 
 ---
 
+## Framework Design
+
+The framework follows a Page Object Model structure with reusable
+utilities.
+
+* **Page Objects** – Store page locators and page-specific actions
+* **Base Test** – Handles WebDriver initialization and test setup/teardown
+* **WebUtilities** – Provides reusable explicit-wait and Selenium utilities
+* **Test Classes** – Contain test scenarios and assertions
+* **Test Data** – Externalized test data is used for data-driven scenarios
+* **TestNG** – Controls test execution and test suites
 
 
 ## Learning Objectives

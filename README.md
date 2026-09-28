@@ -252,12 +252,10 @@ utilities.
 * **Test Data** – Externalized test data is used for data-driven scenarios
 * **TestNG** – Controls test execution and test suites
 
-
 ## Learning Objectives
 
 This project is intended to demonstrate practical knowledge of:
 
-- Selenium WebDriver
 - Java
 - Selenium WebDriver automation
 - TestNG

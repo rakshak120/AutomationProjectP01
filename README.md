@@ -67,6 +67,8 @@ AutomationProjectP01
 ├── testng.xml
 └── README.md
 
+```
+
 ## Key Features
 
 ### 1. Page Object Model

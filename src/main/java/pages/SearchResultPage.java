@@ -58,24 +58,21 @@ public class SearchResultPage extends WebUtilities {
     }
 	
 
-	
-	public boolean isHotelNameDisplayed(String hotelName) {
+    public boolean isHotelNameDisplayed(String hotelName) {
 
-	    By hotelLocator = By.xpath(
-	        "//div[@data-testid='title' and normalize-space()=\"" 
-	        + hotelName.trim() + "\"]"
-	    );
+        By hotelLocator = By.xpath(
+            "//div[@data-testid='title' and normalize-space()=\""
+            + hotelName.trim() + "\"]"
+        );
 
-	    try {
-	        return new WebDriverWait(driver, Duration.ofSeconds(10))
-	                .until(ExpectedConditions.visibilityOfElementLocated(hotelLocator))
-	                .isDisplayed();
+        try {
+            return new WebDriverWait(driver, Duration.ofSeconds(10))
+                    .until(ExpectedConditions.visibilityOfElementLocated(hotelLocator)) != null;
 
-	    } catch (TimeoutException e) {
-	        return false;
-	    }
-	}
-	
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
 
 	
 

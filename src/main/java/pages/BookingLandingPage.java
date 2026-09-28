@@ -45,29 +45,19 @@ public class BookingLandingPage extends WebUtilities {
 
     public void selectLanguage(String language) {
 
-        WebElement lanButton = waitForElementToBeClickable(languageButton);
+        WebElement lanButton =
+                waitForElementToBeClickable(languageButton);
 
         lanButton.click();
-
-        System.out.println("Language dropdown opened. Looking for: " + language);
-
-        List<WebElement> languageOptions =
-                driver.findElements(By.xpath("//button[@data-testid='selection-item']"));
-
-        System.out.println("Number of language/currency options found: " + languageOptions.size());
-
-        for (WebElement option : languageOptions) {
-            System.out.println("OPTION TEXT: [" + option.getText() + "]");
-        }
 
         By languageOption = By.xpath(
                 "//button[@data-testid='selection-item'][contains(normalize-space(.),'"
                         + language + "')]"
         );
 
-        WebElement langOption = waitForElementToBeClickable(languageOption);
+        System.out.println("Waiting for language option: " + language);
 
-        langOption.click();
+        waitForElementToBeVisible(languageOption).click();
 
         System.out.println("Language button clicked.");
     }

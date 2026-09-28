@@ -276,12 +276,15 @@ public class HomeScreenPage extends WebUtilities {
 	
 	
 	
-    public SearchResultPage clickSearchBtn() {
-    	
-    	submit.click();
-    	return new SearchResultPage(driver);
-    }
-	
+	public SearchResultPage clickSearchBtn() {
+
+	    waitForElementToBeClickable(
+	        By.xpath("//button[@type='submit']")
+	    ).click();
+
+	    return new SearchResultPage(driver);
+	    
+	}
 	
 	
 	

@@ -46,16 +46,26 @@ AutomationProjectP01
 ├── src
 │   ├── main
 │   │   └── java
-│   │       └── ...
+│   │       ├── base
+│   │       │   └── BaseTest.java
+│   │       ├── pages
+│   │       │   └── Page Object classes
+│   │       ├── utilities
+│   │       │   └── WebUtilities.java
+│   │       └── resources
+│   │           └── GlobalData.properties
 │   │
 │   └── test
 │       └── java
-│           └── ...
+│           └── test
+│               └── Test classes
+│
+├── test-data
+│   └── JSON test data
 │
 ├── pom.xml
 ├── testng.xml
 └── README.md
-```
 
 ## Key Features
 
@@ -261,4 +271,3 @@ This project is intended to demonstrate practical knowledge of:
 
 
 
-```

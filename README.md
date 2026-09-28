@@ -18,15 +18,15 @@ The automation suite currently contains **7 UI test cases**.
 
 ## Tech Stack
 
-* **Java 21**
-* **Selenium WebDriver** 
-* **TestNG**
-* **Maven**
-* **Jenkins**
-* **Chrome Browser**
-* **Page Object Model (POM)**
-* **Git / GitHub**
-
+- **Java 21**
+- **Selenium WebDriver**
+- **TestNG**
+- **Maven**
+- **Jenkins**
+- **Chrome Browser**
+- **Page Object Model (POM)**
+- **Git / GitHub**
+  
 ---
 
 ## CI/CD Flow
@@ -35,7 +35,6 @@ GitHub → Jenkins → Maven → TestNG → Selenium WebDriver → Test Results
 
 Code changes are pushed to GitHub and the Jenkins job checks out the
 repository and executes the automated TestNG suite using Maven.
-
 
 
 ## Project Structure
@@ -122,7 +121,7 @@ The Jenkins job executes:
 mvn clean test
 ```
 
-This allows the automation suite to be executed outside the local Eclipse environment and provides build/test results through Jenkins.
+This allows the automation suite to be executed from the GitHub repository in a CI environment and provides build/test results through Jenkins.
 
 ---
 
@@ -191,8 +190,6 @@ mvn clean test
 
 ---
 
-
-
 ## Jenkins Execution
 
 The project is integrated with Jenkins for CI execution.
@@ -260,16 +257,17 @@ utilities.
 
 This project is intended to demonstrate practical knowledge of:
 
-* Selenium WebDriver
-* Java automation
-* TestNG
-* Maven
-* Page Object Model
-* Explicit waits
-* Test automation framework design
-* Git/GitHub
-* Jenkins CI execution
-* Debugging and analyzing automation failures
+- Selenium WebDriver
+- Java
+- Selenium WebDriver automation
+- TestNG
+- Maven
+- Page Object Model
+- Explicit waits
+- Test automation framework design
+- Git/GitHub
+- Jenkins CI execution
+- Debugging and analyzing automation failures
 
 
 

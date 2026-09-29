@@ -1,3 +1,8 @@
+## 👨‍💻 Author
+**Rakshak**  
+- GitHub: [rakshak120](https://github.com/rakshak120)  
+- LinkedIn: https://www.linkedin.com/in/rakshak-singh-1a92a3148/  
+- Email: singhrakshak83@gmail.com 
 # AutomationProjectP01
 
 A Selenium WebDriver automation testing project built using **Java, Selenium, TestNG, Maven, and Jenkins**.
